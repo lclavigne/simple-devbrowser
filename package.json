@@ -1,15 +1,22 @@
 {
   "name": "simple-devbrowser",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build:Win64": "electron-packager . SimpleDevBrowser --platform=win32 --arch=x64",
+    "build:Win32": "electron-packager . SimpleDevBrowser --platform=win32 --arch=ia32",
+    "build:Linux64": "electron-packager . SimpleDevBrowser --platform=linux --arch=x64",
+    "build:Linux32": "electron-packager . SimpleDevBrowser --platform=linux --arch=ia32"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Simple webview for devs",
   "dependencies": {
     "electron": "^9.0.0"
+  },
+  "devDependencies": {
+    "electron-packager": "^14.2.1"
   }
 }
